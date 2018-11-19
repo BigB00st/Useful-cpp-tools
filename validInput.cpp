@@ -2,15 +2,16 @@
   Function: validInput
 
   Summary:  Function gets input from user. Cleans buffer and removes
-  endline. Returns true if input was integer.
+  endline. Returns true if input was the expected input type.
 
-  Args:     int & input
+  Args:    template<class>
 			  Variable to input into.
 
   Returns:  bool
-			  True if input was integer, false if not.
+			  True if input was the expected input type, false if not.
 F---F---F---F---F---F---F---F---F---F---F---F---F---F---F---F---F-F*/
-bool validInput(int & input)
+template<class T>
+bool validInput(T & input)
 {
 	bool valid = false;
 	std::cin >> input;
