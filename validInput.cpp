@@ -45,7 +45,7 @@ bool validInput(T & input)
   Returns:  <typename> choice
 			  The choice of the user regrading the printed message
   
-  Note:  typename must support operator: <=
+  Note:  typename must support operator: <, >
 F---F---F---F---F---F---F---F---F---F---F---F---F---F---F---F---F-F*/
 template<typename T>
 T printAndGetInput(const char * msg, const T & min, const T & max)
@@ -57,7 +57,7 @@ T printAndGetInput(const char * msg, const T & min, const T & max)
 		system("cls");
 		std::cout << msg;
 		valid = validInput(choice);
-	} while (!valid || !(min <= choice <= max));
+	} while (!valid || choice < min || choice > max);
 
 	return choice;
 }
