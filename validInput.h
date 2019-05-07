@@ -1,4 +1,9 @@
-//Functions use iostream
+#include <iostream>
+
+/**--------------------------------------------------------
+* @author   Amit Botzer
+* @email    botzer.2002@gmail.com
+---------------------------------------------------------*/
 
 /*F+F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F+++F
   Function: validInput
@@ -7,7 +12,7 @@
 			endline. Returns true if input was the expected input type.
 
   Args:    <typename> input
-			  Variable to input into.
+			  Reference of variable to input into.
 
   Returns:  bool
 			  True if input was the expected input type, false if not.
@@ -42,27 +47,22 @@ bool validInput(T & input)
 		   <typename> max
 			  Maximum acceptable input
 
-  Returns:  <typename> choice
-			  The choice of the user regrading the printed message
+  Returns:  <typename> input
+			  The input of the user regrading the printed message
   
   Note:  typename must support operator: <, >
 F---F---F---F---F---F---F---F---F---F---F---F---F---F---F---F---F-F*/
 template<typename T>
 T printAndGetInput(const char * msg, const T & min, const T & max)
 {
-	T choice = 0;
+	T input = 0;
 	bool valid = false;
 	do
 	{
 		system("cls");
 		std::cout << msg;
-		valid = validInput(choice);
-	} while (!valid || choice < min || choice > max);
+		valid = validInput(input);
+	} while (!valid || input < min || input > max);
 
-	return choice;
+	return input;
 }
-
-/**--------------------------------------------------------
-* @author   Amit Botzer
-* @email    botzer.2002@gmail.com
----------------------------------------------------------*/
