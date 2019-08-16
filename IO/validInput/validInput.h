@@ -48,7 +48,7 @@ bool validInput(T & input)
 			  Maximum acceptable input
 
   Returns:  <typename> input
-			  The input of the user regrading the printed message
+			  The input of the user regarding the printed message
   
   Note:  typename must support operator: <, >
 F---F---F---F---F---F---F---F---F---F---F---F---F---F---F---F---F-F*/
